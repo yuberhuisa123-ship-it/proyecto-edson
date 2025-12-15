@@ -1,0 +1,400 @@
+.background-container-hero {
+	h1 {
+		width: 100%;
+		/* Truncar texto */
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 95vw;
+	}
+
+	.row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		flex-wrap: wrap;
+
+		p {
+			color: var(--color-light);
+			font-size: 18px;
+			font-weight: 400;
+			margin-bottom: 20px;
+			text-align: center;
+
+			i {
+				margin-right: 10px;
+				color: var(--color-primary);
+			}
+		}
+	}
+
+	@media (max-width: 992px) {
+		h1 {
+			width: 70%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			width: 85%;
+		}
+	}
+}
+
+main {
+	padding: 100px 0;
+
+	.block-content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 40px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		.container-img {
+			border-radius: 30px;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 600px;
+				object-fit: cover;
+			}
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.6;
+		}
+
+		.quote {
+			display: flex;
+			align-items: flex-start;
+			gap: 30px;
+			padding: 30px;
+			background-color: var(--color-primary);
+			border-radius: 15px;
+
+			p {
+				color: var(--color-light);
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			margin-left: 20px;
+
+			li {
+				font-size: 18px;
+			}
+		}
+
+		&:nth-child(2) {
+			padding-bottom: 40px;
+			margin-bottom: 40px;
+			border-bottom: 1px solid var(--color-divider);
+		}
+	}
+
+	.row-tags {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.container-tags {
+			display: flex;
+			gap: 20px;
+			align-items: center;
+
+			span {
+				color: var(--color-light);
+				font-size: 20px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				align-items: center;
+
+				li {
+					list-style: none;
+
+					a {
+						display: block;
+						text-decoration: none;
+						background-color: var(--color-primary);
+						color: var(--color-light);
+						font-weight: 700;
+						padding: 10px 30px;
+						border-radius: 999px;
+						transition: all 0.3s ease-in-out;
+
+						&:hover {
+							background-color: var(--color-light);
+							color: var(--dark-color-divider);
+						}
+					}
+				}
+			}
+		}
+
+		.container-social-icons {
+			ul {
+				display: flex;
+				gap: 20px;
+				align-items: center;
+
+				li {
+					list-style: none;
+					width: 45px;
+					height: 45px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border: 1px solid var(--color-primary);
+					border-radius: 50%;
+					transition: all 0.3s ease-in-out;
+
+					a {
+						text-decoration: none;
+						color: var(--color-primary);
+						font-size: 20px;
+						transition: all 0.3s ease-in-out;
+						width: 100%;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					&:hover {
+						border-color: var(--color-light);
+
+						a {
+							color: var(--color-light);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 992px) {
+		padding: 50px 15px;
+
+		.block-content {
+			.container-img {
+				img {
+					height: 400px;
+				}
+			}
+
+			.quote {
+				flex-direction: column;
+				gap: 10px;
+
+				p {
+					font-size: 18px;
+				}
+			}
+		}
+
+		.row-tags {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 30px;
+
+			.container-social-icons {
+				ul {
+					li {
+						width: 35px;
+						height: 35px;
+
+						a {
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		.block-content {
+			.container-img {
+				img {
+					height: 100%;
+				}
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+/* ********************************** */
+/*           SECCION BOOKING          */
+/* ********************************** */
+.section-booking-table {
+	& > div {
+		display: flex;
+		align-items: center;
+		gap: 80px;
+		position: relative;
+	}
+
+	.content {
+		flex: 1;
+
+		.schedules {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			margin-top: 40px;
+
+			h3 {
+				color: var(--color-light);
+				font-size: 24px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.spacer {
+		flex: 1;
+	}
+
+	.contact-form {
+		background-color: var(--color-light);
+		height: 500px;
+		width: 50%;
+		border-radius: 15px;
+		padding: 60px 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		label {
+			color: var(--dark-color-divider);
+		}
+
+		.group-form {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			input {
+				padding: 15px;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+				font-size: 14px;
+				font-weight: 400;
+				color: var(--text-color);
+				transition: all 0.3s;
+
+				&:focus {
+					outline: none;
+				}
+
+				&::placeholder {
+					color: var(--text-color);
+				}
+			}
+
+			select {
+				padding: 15px;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+				font-size: 14px;
+				font-weight: 400;
+				color: var(--text-color);
+				transition: all 0.3s;
+				width: 100%;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		.row {
+			display: flex;
+			gap: 20px;
+
+			.group-form {
+				flex: 1;
+			}
+		}
+		button {
+			border: none;
+			background-color: var(--color-primary);
+			color: var(--color-light);
+			font-weight: 700;
+			padding: 20px;
+			border-radius: 999px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			margin-top: 30px;
+
+			&:hover {
+				background-color: #333;
+			}
+		}
+	}
+
+	@media (max-width: 992px) {
+		padding-left: 15px;
+		padding-right: 15px;
+
+		& > div {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.spacer {
+			height: 400px;
+			flex: auto;
+			width: 100%;
+		}
+
+		.contact-form {
+			width: 100%;
+			top: 45%;
+			right: 0;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.spacer {
+			height: 700px;
+		}
+
+		.contact-form {
+			height: auto;
+			padding: 30px 20px;
+			top: 35%;
+
+			.row {
+				flex-direction: column;
+			}
+		}
+	}
+}
